@@ -1,0 +1,127 @@
+{
+  "name": "chatgpt-note-helper",
+  "publisher": "DuGuYifei",
+  "displayName": "ChatGPT Note Helper",
+  "description": "Embed chatgpt to help us write note then don't need to search solution in the internet everywhere.",
+  "icon": "images/logo.jpg",
+  "repository": "https://github.com/DuGuYifei/vscode_chatgpt-note-helper",
+  "keywords": [
+    "chatgpt",
+    "markdown",
+    "md",
+    "note",
+    "notes"
+  ],
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "chantgpt_note_helper",
+      "properties": {
+        "chatgpt-note-helper.apikey": {
+          "type": "string",
+          "default": "",
+          "scope": "application",
+          "description": "Personal api key of openai, get in https://platform.openai.com/account/api-keys"
+        },
+        "chatgpt-note-helper.maxToken": {
+          "type": "number",
+          "default": 3000,
+          "scope": "application",
+          "description": "Input max token which decide the max length of reply. Maximum is 4096"
+        },
+        "chatgpt-note-helper.temperature": {
+          "type": "number",
+          "default": 0.1,
+          "scope": "application",
+          "description": "Input temperature which decide the model's divergence of idea"
+        },
+        "chatgpt-note-helper.isLongConversationMode": {
+          "type": "boolean",
+          "default": false,
+          "scope": "application",
+          "description": "Input 0 or 1 to close or open long conversation by read write json."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "chatgpt-note-helper.enterApiKey",
+        "title": "ChatGPT: Enter Api Key"
+      },
+      {
+        "command": "chatgpt-note-helper.ask",
+        "title": "ChatGPT: Ask question"
+      },
+      {
+        "command": "chatgpt-note-helper.adjustMaxToken",
+        "title": "ChatGPT: Adjust parameter max_token"
+      },
+      {
+        "command": "chatgpt-note-helper.adjustTemperature",
+        "title": "ChatGPT: Adjust parameter temperature"
+      },
+      {
+        "command": "chatgpt-note-helper.switchJsonMode",
+        "title": "ChatGPT: Enable a longer chat by json"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "chatgpt-note-helper.ask",
+        "key": "shift+A+S",
+        "mac": "cmd+A+S",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorFocus",
+          "command": "chatgpt-note-helper.ask",
+          "group": "navigation@1"
+        },
+        {
+          "when": "editorFocus",
+          "command": "chatgpt-note-helper.readWriteJson",
+          "group": "navigation@2"
+        }
+      ],
+      "editor/title": [
+        {
+          "when": "editorFocus",
+          "command": "chatgpt-note-helper.ask",
+          "group": "navigation",
+          "icon": {
+            "light": "./images/chatlight.png",
+            "dark": "./images/chatdark.png"
+          }
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.75.0",
+    "@vscode/test-electron": "^2.2.3",
+    "eslint": "^8.34.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "node-fetch": "^2.6.9",
+    "typescript": "^4.9.5"
+  }
+}
