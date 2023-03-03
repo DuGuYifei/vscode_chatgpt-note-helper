@@ -22,6 +22,10 @@ This plugins inspired by helping to make notes in markdown. But it can also be u
       3. `chatgpt-note-helper.adjustTemperature`: change the temperature. But in long conversation, you need change in json file where the plugin will tell you.
       4. `chatgpt-note-helper.switchJsonMode`: Change the mode of long/short conversation. Store json file in current folder. Because I hate store file in cache which make me feel uncomfortable.
 
+4. Hot key:
+   1. Win: `shift + a + s` ask
+   2. Mac: `cmd + a + s` ask
+
 ## Requirements
 
 You have your own OpenAI (ChatGPT) account or microsoft account.
@@ -35,7 +39,6 @@ Include if your extension adds any VS Code settings through the `contributes.con
 ```
 But when the plugins tell you that you should shorten the max_tokens for the long conversation mode, you can change the max_token in your json file which is in your current folder.
 ```
-
 
 ### 0.0.1
 
