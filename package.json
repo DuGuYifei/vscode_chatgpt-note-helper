@@ -2,7 +2,7 @@
   "name": "chatgpt-note-helper",
   "publisher": "DuGuYifei",
   "displayName": "ChatGPT Note Helper",
-  "description": "Embed chatgpt to help us write note then don't need to search solution in the internet everywhere.",
+  "description": "Embed chatgpt to help us write note then don't need to search solution in the internet everywhere. Help us make notes, finish text assignment, chat with GPT-3.5, code.",
   "icon": "images/logo.jpg",
   "repository": "https://github.com/DuGuYifei/vscode_chatgpt-note-helper",
   "keywords": [
@@ -17,13 +17,17 @@
     "vscode": "^1.75.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Notebooks",
+    "Education",
+    "Snippets"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+  ],
   "main": "./extension.js",
   "contributes": {
     "configuration": {
-      "title": "chantgpt_note_helper",
+      "title": "ChatGPT Note Helper",
       "properties": {
         "chatgpt-note-helper.apikey": {
           "type": "string",
@@ -58,7 +62,11 @@
       },
       {
         "command": "chatgpt-note-helper.ask",
-        "title": "ChatGPT: Ask question"
+        "title": "ChatGPT: Ask question",
+        "icon": {
+          "light": "images/chatlight.png",
+          "dark": "images/chatdark.png"
+        }
       },
       {
         "command": "chatgpt-note-helper.adjustMaxToken",
@@ -90,7 +98,7 @@
         },
         {
           "when": "editorFocus",
-          "command": "chatgpt-note-helper.readWriteJson",
+          "command": "chatgpt-note-helper.switchJsonMode",
           "group": "navigation@2"
         }
       ],
@@ -98,11 +106,7 @@
         {
           "when": "editorFocus",
           "command": "chatgpt-note-helper.ask",
-          "group": "navigation",
-          "icon": {
-            "light": "./images/chatlight.png",
-            "dark": "./images/chatdark.png"
-          }
+          "group": "navigation"
         }
       ]
     }
@@ -111,6 +115,9 @@
     "lint": "eslint .",
     "pretest": "npm run lint",
     "test": "node ./test/runTest.js"
+  },
+  "dependencies":{
+    "node-fetch": "^2.6.9"
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
@@ -121,7 +128,6 @@
     "eslint": "^8.34.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
-    "node-fetch": "^2.6.9",
     "typescript": "^4.9.5"
   }
 }
