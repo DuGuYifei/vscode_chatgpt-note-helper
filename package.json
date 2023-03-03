@@ -2,7 +2,7 @@
   "name": "chatgpt-note-helper",
   "publisher": "DuGuYifei",
   "displayName": "ChatGPT Note Helper",
-  "description": "Embed chatgpt to help us write note then don't need to search solution in the internet everywhere. Help us make notes, finish text assignment, chat with GPT-3.5, code.",
+  "description": "Embed chatgpt to help us make notes, finish text task, code, chat with GPT-3.5.",
   "icon": "images/logo.jpg",
   "repository": "https://github.com/DuGuYifei/vscode_chatgpt-note-helper",
   "keywords": [
@@ -12,7 +12,7 @@
     "note",
     "notes"
   ],
-  "version": "0.0.1",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -24,7 +24,7 @@
   ],
   "activationEvents": [
   ],
-  "main": "./extension.js",
+  "main": "extension.js",
   "contributes": {
     "configuration": {
       "title": "ChatGPT Note Helper",

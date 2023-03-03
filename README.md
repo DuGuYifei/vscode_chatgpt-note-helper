@@ -1,8 +1,11 @@
 # chatgpt-note-helper README
 
-This plugins inspired by helping to make notes in markdown. But it can also be used in finishing your text homework, chatting with GPT-3.5 (ChatGPT based), helping you code.
+This plugins inspired by helping to make notes in markdown. 
+But it can also be used in finishing your text homework, chatting with GPT-3.5 (ChatGPT based), helping you code.
 
 这个插件最开始是为了帮助做笔记。但是它也可以被用于写文本作业，和GPT-3.5聊天（ChatGPT用的模型），帮助你写代码。
+
+![](https://github.com/DuGuYifei/vscode_chatgpt-note-helper/blob/main/images/intro.gif?raw=true)
 
 ## Features
 
@@ -10,7 +13,7 @@ This plugins inspired by helping to make notes in markdown. But it can also be u
    1. long: remember previous messages by json file
    2. short: each time one message
 
-2. adjust param
+2. adjust param by command or `setting->extension->ChatGPT Note Helper`
    1. `max_token`: decide the lenth of messages
    2. `temperature`: decide the model to give you how many its own ideas
 
@@ -37,9 +40,15 @@ Include if your extension adds any VS Code settings through the `contributes.con
 ## known issues
 1. The api of openAI have the limit of max_tokens, so we can not have the history as long as the ChatGPT website. 
 ```
-But when the plugins tell you that you should shorten the max_tokens for the long conversation mode, you can change the max_token in your json file which is in your current folder.
+But when the plugins tell you that you should shorten the max_tokens for the long conversation mode, 
+you can change the max_token in your json file which is in your current folder.
 ```
 
 ### 0.0.1
 
 Initial release
+
+### 1.0.0
+
+1. Clear redundant code
+2. Fix bug of change long conversation mode
