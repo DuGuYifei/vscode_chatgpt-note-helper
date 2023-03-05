@@ -1,6 +1,6 @@
 # chatgpt-note-helper README
 
-This plugins inspired by helping to make notes in markdown. 
+This plugin is inspired by helping to make notes in markdown. 
 But it can also be used in finishing your text homework, chatting with GPT-3.5 (ChatGPT based), helping you code.
 
 这个插件最开始是为了帮助做笔记。但是它也可以被用于写文本作业，和GPT-3.5聊天（ChatGPT用的模型），帮助你写代码。

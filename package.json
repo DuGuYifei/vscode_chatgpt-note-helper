@@ -12,7 +12,7 @@
     "note",
     "notes"
   ],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -94,12 +94,12 @@
         {
           "when": "editorFocus",
           "command": "chatgpt-note-helper.ask",
-          "group": "navigation@1"
+          "group": "chatgpt-note-helper.navigation"
         },
         {
           "when": "editorFocus",
           "command": "chatgpt-note-helper.switchJsonMode",
-          "group": "navigation@2"
+          "group": "chatgpt-note-helper.navigation"
         }
       ],
       "editor/title": [
